@@ -1,0 +1,71 @@
+/* animation for zooming */
+@keyframes popPageNotFound_zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* animation for  left moving */
+@keyframes paddingLeft {
+  0% {
+    margin-left: 0rem;
+  }
+
+  50% {
+    margin-left: 1rem;
+  }
+
+  100% {
+    margin-left: 0rem;
+  }
+}
+/* style */
+.notFound_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.notFound_title {
+  font-size: 10rem !important;
+  font-weight: 1000;
+  /* color for 404 big text */
+  color: palevioletred;
+  animation-name: popPageNotFound_zoom;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  font-family: "Dosis", sans-serif;
+  padding: 0 0.2rem;
+}
+.pageNotFound_text {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: "Dosis", sans-serif;
+}
+.pageNotFound_description {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  text-align: center;
+  padding: 1rem 0;
+  font-family: "Dosis", sans-serif;
+}
+.btn {
+  font-family: "Dosis", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  animation-name: paddingLeft;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  /* return to home color */
+  background-color: green !important;
+  color: white !important;
+}
