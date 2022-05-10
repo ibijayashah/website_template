@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Hover</title>
+    <!-- fontAwesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <style>
+      .buttonHover {
+        position: relative;
+        display: inline-block;
+        border-radius: 30px;
+        background-color: white;
+        color: red;
+        text-align: center;
+        font-size: 15px;
+        padding: 0.5rem 1rem;
+        transition: all 0.4s;
+        outline: 1px solid red;
+      }
+      .buttonHover .btn-icon {
+        background-color: red;
+        width: 75px;
+        height: 100%;
+        float: right;
+        position: absolute;
+        border-radius: 0rem 2rem 2rem 0;
+        right: 0px;
+        top: 0px;
+        transition: all 0.3s;
+      }
+      .buttonText {
+        position: relative;
+        z-index: 9999;
+        padding-right: 4rem;
+      }
+      .btn-icon::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 40px solid white;
+        border-right: 35px solid transparent;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+      .buttonHover:hover .btn-icon {
+        width: 100%;
+        border-radius: 2rem;
+      }
+      .buttonHover:hover .btn-icon::after {
+        display: none;
+        opacity: 0.1;
+      }
+      .btn-icon i {
+        position: absolute;
+        right: 25px;
+        top: 35%;
+        color: #fff;
+      }
+      .buttonHover:hover {
+        color: #fff !important;
+      }
+    </style>
+    <div className="d-flex justify-content-center pt-2">
+      <div class="buttonHover" href="#">
+        <span class="buttonText">Show More</span>
+        <div class="btn-icon">
+          <i className="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
